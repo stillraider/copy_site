@@ -78,3 +78,71 @@ header {
         }
     }
 }
+.dropdown {
+    background: url(../images/list-logo/MxM9gyR7SPyCJw5hcPdmrg.jpg);
+    background-position-x: 51%;
+    height: 430px;
+    width: 100%;
+    position: absolute;
+    .shadow-block {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.075) 0%, rgba(0, 0, 0, 0.349) 50%, rgba(0, 0, 0, 0.075) 100%);
+        height: 145px;
+        width: 100%;
+        .main-dropdown {
+            margin: 0 auto;
+            height: 100%;
+            width: 955px;
+            .showcase-list {
+                display: flex;
+                &__items {
+                    width: 115px;
+                    height: 78px;
+                    margin-top: 30px;
+                    margin-right: 42px;
+                    .content-change {
+                        display: block;
+                        &__logo {
+                            display: block;
+                            svg {
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                        &__text {
+                            font-family: Arial, Helvetica, sans-serif;
+                            color: #9B9B9B;
+                            display: block;
+                            margin-top: 15px;
+                            text-align: center;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &__items:nth-child(3) {
+                    width: 120px;
+                    .content-change__text {
+                        margin-top: 20px;
+                    }
+                }
+                &__items:nth-child(5) {
+                    width: 120px;
+                    .content-change__logo {
+                        margin-top: 6px;
+                    }
+                    .content-change__text{
+                        margin-top: 24px;
+                    }
+                }
+                &__items:nth-child(6) {
+                    width: 120px;
+                    .content-change__logo {
+                        margin-top: 10px;
+                    }
+                    .content-change__text {
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
