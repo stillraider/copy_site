@@ -53,6 +53,9 @@ header {
                         margin-left: 7px;
                         margin-top: 3px;
                     }
+                    .rotate {
+                        transform: rotate(180deg);
+                    }
                     &:hover .showcase__text {
                         transition: opacity ease-in-out 0.07s;
                         opacity: .9;
@@ -84,7 +87,7 @@ header {
     }
 }
 .dropdown {
-    background: url(../images/list-logo/MxM9gyR7SPyCJw5hcPdmrg.jpg) 51%;
+    background: url(../images/list-logo/0.jpg) 51%;
     height: 430px;
     width: 100%;
     opacity: 0;
@@ -155,4 +158,9 @@ header {
             }
         }
     }
+}
+.showblock {
+    pointer-events: initial;
+    opacity: 1;
+    top: 37px;
 }

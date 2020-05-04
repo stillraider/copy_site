@@ -116,6 +116,10 @@ header {
             height: 4px;
             margin-left: 7px;
             margin-top: 3px; }
+          header .common_menu .left_menu .additional_tab .showcase .rotate {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
           header .common_menu .left_menu .additional_tab .showcase:hover .showcase__text {
             -webkit-transition: opacity ease-in-out 0.07s;
             -o-transition: opacity ease-in-out 0.07s;
@@ -144,7 +148,7 @@ header {
           opacity: .9; }
 
 .dropdown {
-  background: url(../images/list-logo/MxM9gyR7SPyCJw5hcPdmrg.jpg) 51%;
+  background: url(../images/list-logo/0.jpg) 51%;
   height: 430px;
   width: 100%;
   opacity: 0;
@@ -206,3 +210,8 @@ header {
             margin-top: 10px; }
           .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(6) .content-change__text {
             margin-top: 24px; }
+
+.showblock {
+  pointer-events: initial;
+  opacity: 1;
+  top: 37px; }
