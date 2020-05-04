@@ -3,11 +3,13 @@ let truthful = true;
 
 function showcase() {
     if (truthful) {
-        dropdown[0].style.display = "block";
+        dropdown[0].style.pointerEvents = "initial";
+        dropdown[0].style.opacity = "1";
         dropdown[0].style.top = "37px";
     }
     else {
-        dropdown[0].style.display = "none";
+        dropdown[0].style.pointerEvents = "none";
+        dropdown[0].style.opacity = "0";
         dropdown[0].style.top = "0";
     }
     truthful = !truthful;
@@ -15,7 +17,15 @@ function showcase() {
 
 let change_color = document.getElementsByClassName("change-color");
 let content_text = document.getElementsByClassName("content-change__text");
+let fond = document.getElementsByClassName("dropdown");
 let colors = ["#F25322","#00CBCD","#1E5AFF","#F49511","#FFC83C","#D19834"];
+let imag = ["url(./images/list-logo/MxM9gyR7SPyCJw5hcPdmrg.jpg) 51%",
+    "url(./images/list-logo/3sSeliRgSOSf7ynGKfYlEA.jpg) 51%",
+    "url(./images/list-logo/tg9IIg-LT3WXxVKvzfTvvA.jpg) 51%",
+    "url(./images/list-logo/ThKjHBViQ1GK1csrofzWyg.jpg) 51%",
+    "url(./images/list-logo/b7_kVQiDQv-VNUAuJjzYRA.jpg) 51%",
+    "url(./images/list-logo/GQUX_rj-SDOHAPLgKP_xmw.jpg) 51%"
+];
 
 function content_change(index) {
     for (let i = 0; i < change_color.length; i++) {
@@ -26,4 +36,5 @@ function content_change(index) {
             content_text[index].style.color = colors[index];
         }
     }
+    dropdown[0].style.background = imag[index];
 }

@@ -79,11 +79,12 @@ header {
     }
 }
 .dropdown {
-    background: url(../images/list-logo/MxM9gyR7SPyCJw5hcPdmrg.jpg);
-    background-position-x: 51%;
+    background: url(../images/list-logo/MxM9gyR7SPyCJw5hcPdmrg.jpg) 51%;
     height: 430px;
     width: 100%;
-    display: none;
+    opacity: 0;
+    transition: all ease-in-out 0.15s;
+    pointer-events: none;
     position: absolute;
     top: 0;
     .shadow-block {
