@@ -1,14 +1,17 @@
 let dropdown = document.getElementsByClassName("dropdown");
+let check_mark = document.getElementsByClassName("showcase__check-mark");
 let truthful = true;
 
 function showcase() {
     if (truthful) {
         dropdown[0].style.pointerEvents = "initial";
+        check_mark[0].style.transform =  "rotate(180deg)";
         dropdown[0].style.opacity = "1";
         dropdown[0].style.top = "37px";
     }
     else {
         dropdown[0].style.pointerEvents = "none";
+        check_mark[0].style.transform =  "rotate(0deg)";
         dropdown[0].style.opacity = "0";
         dropdown[0].style.top = "0";
     }

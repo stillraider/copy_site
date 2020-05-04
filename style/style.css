@@ -108,14 +108,20 @@ header {
             font-size: 13px;
             color: white;
             opacity: .6; }
-          header .common_menu .left_menu .additional_tab .showcase__text:nth-child(2) {
+          header .common_menu .left_menu .additional_tab .showcase__check-mark {
             background: url("https://cdn-cm.gcdn.co/img/main_sprite_1.1.16.svg");
             background-position: 0 -570px;
+            opacity: .6;
             width: 7px;
             height: 4px;
             margin-left: 7px;
             margin-top: 3px; }
           header .common_menu .left_menu .additional_tab .showcase:hover .showcase__text {
+            -webkit-transition: opacity ease-in-out 0.07s;
+            -o-transition: opacity ease-in-out 0.07s;
+            transition: opacity ease-in-out 0.07s;
+            opacity: .9; }
+          header .common_menu .left_menu .additional_tab .showcase:hover .showcase__check-mark {
             -webkit-transition: opacity ease-in-out 0.07s;
             -o-transition: opacity ease-in-out 0.07s;
             transition: opacity ease-in-out 0.07s;
@@ -186,7 +192,7 @@ header {
         .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(3) {
           width: 120px; }
           .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(3) .content-change__text {
-            margin-top: 20px; }
+            margin-top: 19px; }
         .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(5) {
           width: 120px; }
           .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(5) .content-change__logo {

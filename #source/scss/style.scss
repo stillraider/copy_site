@@ -44,15 +44,20 @@ header {
                         color: white;
                         opacity: .6;
                     }
-                    &__text:nth-child(2) {
+                    &__check-mark {
                         background: url("https://cdn-cm.gcdn.co/img/main_sprite_1.1.16.svg");
                         background-position: 0 -570px;
+                        opacity: .6;
                         width: 7px;
                         height: 4px;
                         margin-left: 7px;
                         margin-top: 3px;
                     }
-                    &:hover .showcase__text{
+                    &:hover .showcase__text {
+                        transition: opacity ease-in-out 0.07s;
+                        opacity: .9;
+                    }
+                    &:hover .showcase__check-mark {
                         transition: opacity ease-in-out 0.07s;
                         opacity: .9;
                     }
@@ -125,7 +130,7 @@ header {
                 &__items:nth-child(3) {
                     width: 120px;
                     .content-change__text {
-                        margin-top: 20px;
+                        margin-top: 19px;
                     }
                 }
                 &__items:nth-child(5) {
