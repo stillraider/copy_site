@@ -142,7 +142,9 @@ header {
   background-position-x: 51%;
   height: 430px;
   width: 100%;
-  position: absolute; }
+  display: none;
+  position: absolute;
+  top: 0; }
   .dropdown .shadow-block {
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.075)), color-stop(50%, rgba(0, 0, 0, 0.349)), to(rgba(0, 0, 0, 0.075)));
     background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.075) 0%, rgba(0, 0, 0, 0.349) 50%, rgba(0, 0, 0, 0.075) 100%);
@@ -161,8 +163,9 @@ header {
         .dropdown .shadow-block .main-dropdown .showcase-list__items {
           width: 115px;
           height: 78px;
+          cursor: pointer;
           margin-top: 30px;
-          margin-right: 42px; }
+          margin-right: 40px; }
           .dropdown .shadow-block .main-dropdown .showcase-list__items .content-change {
             display: block; }
             .dropdown .shadow-block .main-dropdown .showcase-list__items .content-change__logo {
@@ -188,7 +191,8 @@ header {
           .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(5) .content-change__text {
             margin-top: 24px; }
         .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(6) {
-          width: 120px; }
+          width: 120px;
+          margin-right: 0; }
           .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(6) .content-change__logo {
             margin-top: 10px; }
           .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(6) .content-change__text {
