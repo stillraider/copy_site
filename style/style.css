@@ -210,6 +210,59 @@ header {
             margin-top: 10px; }
           .dropdown .shadow-block .main-dropdown .showcase-list__items:nth-child(6) .content-change__text {
             margin-top: 24px; }
+  .dropdown .media-block {
+    height: 285px;
+    width: 100%; }
+    .dropdown .media-block .container {
+      height: 100%;
+      width: 1024px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 auto; }
+      .dropdown .media-block .container .media-content {
+        width: 390px;
+        height: 100%;
+        margin-right: 10px; }
+        .dropdown .media-block .container .media-content:nth-child(1) {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; }
+        .dropdown .media-block .container .media-content:nth-child(2) {
+          background-color: rgba(0, 0, 0, 0.055); }
+        .dropdown .media-block .container .media-content__logo-game {
+          background: url("../images/media-logo/Wc9we6f7SWeZPExOChwGRA.svg");
+          width: 170px;
+          height: 110px; }
+      .dropdown .media-block .container .combine {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .dropdown .media-block .container .combine .combine-content {
+          font-family: Arial, Helvetica, sans-serif;
+          width: 370px; }
+          .dropdown .media-block .container .combine .combine-content:nth-child(1) {
+            background: rgba(0, 0, 0, 0.13);
+            padding: 55px 20px 0;
+            width: 340px; }
+          .dropdown .media-block .container .combine .combine-content:nth-child(2) {
+            background-color: rgba(0, 0, 0, 0.185);
+            width: 272px; }
+          .dropdown .media-block .container .combine .combine-content__title {
+            text-transform: uppercase;
+            color: #f25322;
+            font-size: 16px;
+            margin-bottom: 18px; }
+          .dropdown .media-block .container .combine .combine-content__text {
+            font-size: 14px;
+            color: #e5e5e5;
+            line-height: 23px; }
 
 .showblock {
   pointer-events: initial;
