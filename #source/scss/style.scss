@@ -41,7 +41,7 @@ header {
                     cursor: pointer;
                     &__text {
                         font-size: 13px;
-                        color: white;
+                        color: #e5e5e5;
                         opacity: .6;
                     }
                     &__check-mark {
@@ -76,7 +76,7 @@ header {
                     margin-right: 18px;
                 }
                 &__text:nth-child(2) {
-                    color: white;
+                    color: #e5e5e5;
                 }
                 &__text:hover {
                     transition: opacity ease-in-out 0.07s;
@@ -96,7 +96,7 @@ header {
     position: absolute;
     top: 0;
     .shadow-block {
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.075) 0%, rgba(0, 0, 0, 0.349) 50%, rgba(0, 0, 0, 0.075) 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.075) 0%, rgba(0, 0, 0, 0.349) 50%, rgba(0, 0, 0, 0.275) 100%);
         height: 145px;
         width: 100%;
         .main-dropdown {
@@ -105,6 +105,7 @@ header {
             width: 955px;
             .showcase-list {
                 display: flex;
+                justify-content: center;
                 &__items {
                     width: 115px;
                     height: 78px;
@@ -196,7 +197,11 @@ header {
                     }
                     &:nth-child(2) {
                         background-color: rgba(0, 0, 0, 0.185);
+                        padding: 55px 20px 0;
                         width: 272px;
+                        .combine-content__title {
+                            margin: 0 0 23px 9px;
+                        }
                     }
                     &__title {
                         text-transform: uppercase;
@@ -208,6 +213,53 @@ header {
                         font-size: 14px;
                         color: #e5e5e5;
                         line-height: 23px;
+                    }
+                    .platforms {
+                        display: flex;
+                        .platform {
+                            display: flex;
+                            margin: 15px 23px 0 0;
+                            &__logo {
+                                background: url("https://cdn-cm.gcdn.co/img/main_sprite_1.1.16.svg");
+                                background-position: 0 -3180px;
+                                margin-right: 4px;
+                                width: 11px;
+                                height: 15px;
+                            }
+                            &__text {
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                margin-top: 2px;
+                                color: #e5e5e5;
+                            }
+                            &:nth-child(2) {
+                                .platform__logo {
+                                    background-position: 0 -60px;
+                                }
+                            }
+                        }
+                    }
+                    .list-links {
+                        &__items {
+                            margin-bottom: 12px;
+                            font-size: 13px;
+                            color: #e5e5e5;
+                            display: flex;
+                            .point {
+                                background-color: #e5e5e5;
+                                margin: 6px 7px 0 0;
+                                border-radius: 50%;
+                                display: block;
+                                width: 2px;
+                                height: 2px;
+                            }
+                            .bottom-frame {
+                                border-bottom: 1px solid #e5e5e500;
+                                &:hover {
+                                    border-bottom: 1px solid #e5e5e5;
+                                }
+                            }
+                        }
                     }
                 }
             }
