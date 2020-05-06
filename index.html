@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/icon/8783.750.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
     <title>World of Tanks – Бесплатная Онлайн-игра про Танки</title>
 </head>
 <body>
@@ -38,11 +39,11 @@
         <div class="shadow-block">
             <div class="main-dropdown">
                 <ul class="showcase-list">
-                    <li class="showcase-list__items" onclick="content_change(0)">
+                    <li class="showcase-list__items">
                         <span class="content-change">
                             <span class="content-change__logo">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="43px" viewBox="0 0 24 43" enable-background="new 0 0 24 43" xml:space="preserve">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#F25322" class="change-color" d="M12.0079,38L0.1203,26.2519V11.3133L6.5077,5h11.1349
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#9B9B9B" class="change-color" d="M12.0079,38L0.1203,26.2519V11.3133L6.5077,5h11.1349
                                         l6.2371,6.1648v15.1031L12.0079,38z M22.6072,11.6439l-5.5698-5.505H7.0958l-5.703,5.6372v13.8976l10.6144,10.4895l10.6-10.4767
                                         V11.6439z M9.6349,12.8178H2.7966l4.8942-4.9479h8.7921l4.8087,4.9479h-6.8403v19.9073l-2.4074,2.405l-2.409-2.405V12.8178z
                                          M16.6219,14.1333h4.6433v11.1782l-3.5211,3.5552l-3.2382-3.229v-0.006l2.116-2.0969V14.1333z M7.3813,23.5348l2.2045,2.1019
@@ -50,10 +51,10 @@
                                     </path>
                                 </svg>
                             </span>
-                            <span class="content-change__text" style="color: #F25322;">World of Tanks</span>
+                            <span class="content-change__text">World of Tanks</span>
                         </span>
                     </li>
-                    <li class="showcase-list__items" onclick="content_change(1)">
+                    <li class="showcase-list__items">
                         <span class="content-change">
                             <span class="content-change__logo">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="43px" viewBox="0 0 24 43" enable-background="new 0 0 24 43" xml:space="preserve">
@@ -68,7 +69,7 @@
                             <span class="content-change__text">World of Warships</span>
                         </span>
                     </li>
-                    <li class="showcase-list__items" onclick="content_change(2)">
+                    <li class="showcase-list__items">
                         <span class="content-change">
                             <span class="content-change__logo">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="39px" viewBox="0 0 36 39" style="enable-background:new 0 0 36 39;" xml:space="preserve">
@@ -86,7 +87,7 @@
                             <span class="content-change__text">World of Warships: Legends</span>
                         </span>
                     </li>
-                    <li class="showcase-list__items" onclick="content_change(3)">
+                    <li class="showcase-list__items">
                         <span class="content-change">
                             <span class="content-change__logo">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="43px" viewBox="0 0 24 43" enable-background="new 0 0 24 43" xml:space="preserve">
@@ -100,7 +101,7 @@
                             <span class="content-change__text">World of Tanks Blitz</span>
                         </span>
                     </li>
-                    <li class="showcase-list__items" onclick="content_change(4)">
+                    <li class="showcase-list__items">
                         <span class="content-change">
                             <span class="content-change__logo">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">
@@ -121,7 +122,7 @@
                             <span class="content-change__text">Калибр</span>
                         </span>
                     </li>
-                    <li class="showcase-list__items" onclick="content_change(5)">
+                    <li class="showcase-list__items">
                         <span class="content-change">
                             <span class="content-change__logo">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="24px" viewBox="0 0 38 24" enable-background="new 0 0 38 24" xml:space="preserve">
@@ -140,69 +141,71 @@
                 <div></div>
             </div>
         </div>
-        <div class="media-block">
-            <div class="container">
-                <div class="media-content">
-                    <div class="media-content__logo-game"></div>
-                </div>
-                <div class="combine">
-                    <div class="combine-content">
-                        <h2 class="combine-content__title">world of tanks</h2>
-                        <p class="combine-content__text">
-                            Командный танковый экшен. Более 500 моделей военной техники Второй мировой. 
-                            Многомиллионная армия поклонников. Лучшая онлайн-игра на постсоветском пространстве.
-                        </p>
-                        <div class="platforms">
-                            <div class="platform">
-                                <span class="platform__logo"></span>
-                                <span class="platform__text">windows</span>
-                            </div>
-                            <div class="platform">
-                                <span class="platform__logo"></span>
-                                <span class="platform__text">mac</span>
+        <div class="group-blocks">
+            <div class="media-block">
+                <div class="container">
+                    <div class="media-content">
+                        <div class="media-content__logo-game"></div>
+                    </div>
+                    <div class="combine">
+                        <div class="combine-content">
+                            <h2 class="combine-content__title">world of tanks</h2>
+                            <p class="combine-content__text">
+                                Командный танковый экшен. Более 500 моделей военной техники Второй мировой. 
+                                Многомиллионная армия поклонников. Лучшая онлайн-игра на постсоветском пространстве.
+                            </p>
+                            <div class="platforms">
+                                <div class="platform">
+                                    <span class="platform__logo"></span>
+                                    <span class="platform__text">windows</span>
+                                </div>
+                                <div class="platform">
+                                    <span class="platform__logo"></span>
+                                    <span class="platform__text">mac</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="combine-content">
-                        <h2 class="combine-content__title">ссылка</h2>
-                        <ul class="list-links">
-                            <a href="#">
-                                <li class="list-links__items">
-                                    <span class="point"></span>
-                                    <p class="bottom-frame">Сайт игры</p>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li class="list-links__items">
-                                    <span class="point"></span>
-                                    <p class="bottom-frame">Форум</p>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li class="list-links__items">
-                                    <span class="point"></span>
-                                    <p class="bottom-frame">Центр поддержки</p>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li class="list-links__items">
-                                    <span class="point"></span>
-                                    <p class="bottom-frame">Кланы</p>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li class="list-links__items">
-                                    <span class="point"></span>
-                                    <p class="bottom-frame">Мобильный помощник</p>
-                                </li>
-                            </a>
-                            <a href="#">
-                                <li class="list-links__items">
-                                    <span class="point"></span>
-                                    <p class="bottom-frame">Портал модов</p>
-                                </li>
-                            </a>
-                        </ul>
+                        <div class="combine-content">
+                            <h2 class="combine-content__title">ссылка</h2>
+                            <ul class="list-links">
+                                <a href="#">
+                                    <li class="list-links__items">
+                                        <span class="point"></span>
+                                        <p class="bottom-frame">Сайт игры</p>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-links__items">
+                                        <span class="point"></span>
+                                        <p class="bottom-frame">Форум</p>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-links__items">
+                                        <span class="point"></span>
+                                        <p class="bottom-frame">Центр поддержки</p>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-links__items">
+                                        <span class="point"></span>
+                                        <p class="bottom-frame">Кланы</p>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-links__items">
+                                        <span class="point"></span>
+                                        <p class="bottom-frame">Мобильный помощник</p>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-links__items">
+                                        <span class="point"></span>
+                                        <p class="bottom-frame">Портал модов</p>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

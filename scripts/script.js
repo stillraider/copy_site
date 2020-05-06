@@ -1,11 +1,10 @@
-let dropdown = document.getElementsByClassName("dropdown");
-let check_mark = document.getElementsByClassName("showcase__check-mark");
+let dropdown = $(".dropdown");
+let check_mark = $(".showcase__check-mark");
 let truthful = true;
-let change_color = document.getElementsByClassName("change-color");
-let content_text = document.getElementsByClassName("content-change__text");
-let fond = document.getElementsByClassName("dropdown");
 let colors = ["#F25322","#00CBCD","#1E5AFF","#F49511","#FFC83C","#D19834"];
-let img_ico = ["0","1","2","3","4","5"];
+let contantsChange = $(".content-change");
+let selectButton = 0;
+initButton();
 
 function showcase() {
     if (truthful) {
@@ -19,12 +18,29 @@ function showcase() {
     truthful = !truthful;
 }
 
-function content_change(index) {
-    for (let i = 0; i < change_color.length; i++) {
-        change_color[i].style.fill = "#A6A6A7";
-        content_text[i].style.color = "#A6A6A7";
+contantsChange.hover(
+    function () {
+        let index = contantsChange.index(this);
+        $(this).find(".change-color").css("fill", colors[index]);
+        $(this).find(".content-change__text").css("color", colors[index]);
+    }, 
+    function () {
+        if (selectButton != contantsChange.index(this)) {
+            $(this).find(".change-color").css("fill", "#A6A6A7");
+            $(this).find(".content-change__text").css("color", "#A6A6A7");
+        }
     }
-    change_color[index].style.fill = colors[index];
-    content_text[index].style.color = colors[index];
-    dropdown[0].style.background = "url(./images/list-logo/" + img_ico[index] + ".jpg) 51%";
+);
+contantsChange.click(
+    function () {
+        contantsChange.find(".change-color").css("fill", "#A6A6A7");
+        contantsChange.find(".content-change__text").css("color", "#A6A6A7");
+        selectButton = contantsChange.index(this);
+        $(this).find(".change-color").css("fill", colors[selectButton]);
+        $(this).find(".content-change__text").css("color", colors[selectButton]);
+    }
+);
+function initButton() {
+    contantsChange.first().find(".change-color").css("fill", colors[0]);
+    contantsChange.first().find(".content-change__text").css("color", colors[0]);
 }
