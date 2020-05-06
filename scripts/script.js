@@ -3,6 +3,7 @@ let check_mark = $(".showcase__check-mark");
 let truthful = true;
 let colors = ["#F25322","#00CBCD","#1E5AFF","#F49511","#FFC83C","#D19834"];
 let contantsChange = $(".content-change");
+let groupBlocks = $(".group-blocks");
 let selectButton = 0;
 initButton();
 
@@ -35,9 +36,11 @@ contantsChange.click(
     function () {
         contantsChange.find(".change-color").css("fill", "#A6A6A7");
         contantsChange.find(".content-change__text").css("color", "#A6A6A7");
+        groupBlocks.hide();
         selectButton = contantsChange.index(this);
         $(this).find(".change-color").css("fill", colors[selectButton]);
         $(this).find(".content-change__text").css("color", colors[selectButton]);
+        groupBlocks.eq(selectButton).show();
     }
 );
 function initButton() {

@@ -163,7 +163,6 @@ header {
         }
     }
     .group-blocks {
-        background: url(../images/list-logo/0.jpg) 51%;
         padding-top: 145px;
         .media-block {
             height: 285px;
@@ -176,7 +175,7 @@ header {
                 .media-content {
                     width: 390px;
                     height: 100%;
-                    margin-right: 10px;
+                    margin: 0 10px 0 5px;
                     &:nth-child(1) {
                         display: flex;
                         justify-content: center;
@@ -186,7 +185,7 @@ header {
                         background-color: rgba(0, 0, 0, 0.055);
                     }
                     &__logo-game {
-                        background: url("../images/media-logo/Wc9we6f7SWeZPExOChwGRA.svg");
+                        background: url("../images/media-logo/Wc9we6f7SWeZPExOChwGRA.svg") no-repeat;
                         width: 170px;
                         height: 110px;
                     }
@@ -204,7 +203,7 @@ header {
                         &:nth-child(2) {
                             background-color: rgba(0, 0, 0, 0.185);
                             padding: 55px 20px 0;
-                            width: 272px;
+                            width: 266px;
                             .combine-content__title {
                                 margin: 0 0 23px 9px;
                             }
@@ -243,6 +242,16 @@ header {
                                         background-position: 0 -60px;
                                     }
                                 }
+                                &:nth-child(2) .platform__logo {
+                                    background-position: 0 -30px;
+                                    width: 13px;
+                                }
+                                &:nth-child(3) .platform__logo {
+                                    background-position: 0 -60px;
+                                }
+                                &:nth-child(4) .platform__logo {
+                                    background-position: 0 -60px;
+                                }
                             }
                         }
                         .list-links {
@@ -269,6 +278,67 @@ header {
                         }
                     }
                 }
+            }
+        }
+        &:nth-child(2) {
+            background: url(../images/list-logo/0.jpg) 51%;
+        }
+        &:nth-child(3) {
+            background: url(../images/list-logo/1.jpg) 51%;
+            display: none;
+            .media-block .container .combine .combine-content__title  {
+                color: rgb(0, 203, 205);
+            }
+            .media-block .container .media-content__logo-game {
+                background: url("../images/media-logo/ajCX6d89TnSui2OA3TeFEQ.svg") no-repeat;
+            }
+        }
+        &:nth-child(4) {
+            background: url(../images/list-logo/2.jpg) 51%;
+            display: none;
+            .media-block .container .combine .combine-content__title  {
+                color: rgb(30, 90, 255);
+            }
+            .media-block .container .combine .combine-content .platforms .platform:nth-child(2) .platform__logo {
+                background-position: 0% 1660px;
+                width: 70px;
+            }
+            .media-block .container .media-content__logo-game {
+                background: url("../images/media-logo/FTVUgYTtSDKax6W2wTcuGQ.svg") no-repeat;
+            }
+        }
+        &:nth-child(5) {
+            background: url(../images/list-logo/3.jpg) 51%;
+            display: none;
+            .media-block .container .combine .combine-content__title  {
+                color: rgb(244, 149, 17);
+            }
+            .media-block .container .media-content__logo-game {
+                background: url("../images/media-logo/yv3mgkbvSU2cyr-hoYm-RA.svg") no-repeat;
+            }
+        }
+        &:nth-child(6) {
+            background: url(../images/list-logo/4.jpg) 51%;
+            display: none;
+            .media-block .container .combine .combine-content__title  {
+                color: rgb(255, 200, 60);
+            }
+            .media-block .container .media-content__logo-game {
+                background: url("../images/media-logo/xqT9r-laSye-MXwf9nOSBQ.svg") no-repeat;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &:nth-child(7) {
+            background: url(../images/list-logo/5.jpg) 51%;
+            display: none;
+            .media-block .container .combine .combine-content__title  {
+                color: rgb(209, 152, 52);
+            }
+            .media-block .container .media-content__logo-game {
+                background: url("../images/media-logo/2A13Rhr2T1uWz-gj_ENzjQ.svg") no-repeat;
+                width: 210px;
+                height: 35px;
             }
         }
     }
