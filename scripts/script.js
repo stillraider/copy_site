@@ -4,6 +4,8 @@ let truthful = true;
 let colors = ["#F25322","#00CBCD","#1E5AFF","#F49511","#FFC83C","#D19834"];
 let contantsChange = $(".content-change");
 let groupBlocks = $(".group-blocks");
+let menuItems = $(".main-menu__items");
+let indexNavList = 0;
 let selectButton = 0;
 initButton();
 
@@ -47,3 +49,21 @@ function initButton() {
     contantsChange.first().find(".change-color").css("fill", colors[0]);
     contantsChange.first().find(".content-change__text").css("color", colors[0]);
 }
+
+menuItems.children(".nav-arrow").click(
+    function () {
+        indexNavList = menuItems.index($(this).parent());
+        let selectMenuItem = menuItems.eq(indexNavList);
+        let isShow = selectMenuItem.children(".nav-list").is(":visible");
+        menuItems.children(".nav-list").hide();
+        menuItems.children(".nav-links").css("color", "#aaaaab");
+        if (isShow) {
+            selectMenuItem.children(".nav-list").hide();
+            selectMenuItem.children(".nav-links").css("color", "#aaaaab");
+        }
+        else {
+            selectMenuItem.children(".nav-list").show();
+            selectMenuItem.children(".nav-links").css("color", "#fab81b");
+        }
+    }
+);

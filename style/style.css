@@ -393,6 +393,9 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 0 auto;
     width: 1330px; }
     .main-heading .nav-menu .main-menu__items {
@@ -406,12 +409,48 @@ header {
         font-weight: 700;
         color: #aaaaab;
         line-height: 65px; }
+      .main-heading .nav-menu .main-menu__items .nav-links:hover {
+        color: #fab81b !important; }
+      .main-heading .nav-menu .main-menu__items .nav-arrow {
+        background: url(../images/arrow/down.svg) no-repeat;
+        background-position: center;
+        position: relative;
+        margin: 17px 0 2px 10px;
+        width: 28px;
+        height: 28px; }
+      .main-heading .nav-menu .main-menu__items .nav-arrow:before {
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 1px;
+        top: 10px;
+        background-color: #aaaaab; }
+      .main-heading .nav-menu .main-menu__items .nav-arrow:hover {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiA3IiB3aWR0aD0iOCIgaGVpZ2h0PSI1Ij48cGF0aCBmaWxsPSIjM2MyZjEyIiBkPSJNMTIgMlYwaC0xTDYgNCAxIDBIMHYybDUuOSA1SDZ6Ii8+PC9zdmc+) no-repeat;
+        background-position: center;
+        background-color: #fab81b;
+        cursor: pointer; }
     .main-heading .nav-menu .main-menu__items:nth-child(1) {
       background: url(../images/logo-wot/download.svg) no-repeat;
       background-position: center;
       margin-left: 0;
-      height: 65px;
-      width: 127px; }
+      height: 44px;
+      width: 185px; }
+    .main-heading .nav-menu .main-menu .nav-list {
+      background-color: rgba(39, 39, 43, 0.93);
+      position: absolute;
+      margin-left: -20px;
+      top: 65px;
+      display: none; }
+      .main-heading .nav-menu .main-menu .nav-list__link {
+        display: block;
+        padding: 14px 16px;
+        color: #aaaaab;
+        font-size: 14px; }
+      .main-heading .nav-menu .main-menu .nav-list__link:hover {
+        color: #fab81b !important; }
+      .main-heading .nav-menu .main-menu .nav-list .nav-list:first-child .nav-list__items:nth-child(2) {
+        text-transform: uppercase; }
 
 .main-heading .container-box {
   width: 1330px;
