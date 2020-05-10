@@ -1,69 +1,66 @@
 let dropdown = $(".dropdown");
-let check_mark = $(".showcase__check-mark");
-let truthful = true;
+let showcase = $(".showcase");
+let showblock = $(".showblock");
+let rotate = $(".rotate");
+let checkMark = $(".showcase__check-mark");
+let changeColor = $(".change-color");
 let colors = ["#F25322","#00CBCD","#1E5AFF","#F49511","#FFC83C","#D19834"];
 let contantsChange = $(".content-change");
+let changeText = $(".content-change__text");
 let groupBlocks = $(".group-blocks");
-let menuItems = $(".main-menu__items");
+let navArrow = $(".nav-arrow");
+let menuItems = $(".main-menu__items").has(".nav-arrow");
+let navLinks = $(".nav-links");
+let navList = $(".nav-list");
 let indexNavList = 0;
-let selectButton = 0;
-initButton();
-
-function showcase() {
-    if (truthful) {
-        dropdown[0].classList.add("showblock");
-        check_mark[0].classList.add("rotate");
-    }
-    else {
-        dropdown[0].classList.remove("showblock");
-        check_mark[0].classList.remove("rotate");
-    }
-    truthful = !truthful;
-}
-
-contantsChange.hover(
+let hoverSvg = 0;
+let clickButton = 0;
+firstColorSvg();
+showcase.click(
     function () {
-        let index = contantsChange.index(this);
-        $(this).find(".change-color").css("fill", colors[index]);
-        $(this).find(".content-change__text").css("color", colors[index]);
-    }, 
-    function () {
-        if (selectButton != contantsChange.index(this)) {
-            $(this).find(".change-color").css("fill", "#A6A6A7");
-            $(this).find(".content-change__text").css("color", "#A6A6A7");
-        }
+        dropdown.toggleClass("showblock");
+        checkMark.toggleClass("rotate");
     }
 );
 contantsChange.click(
     function () {
-        contantsChange.find(".change-color").css("fill", "#A6A6A7");
-        contantsChange.find(".content-change__text").css("color", "#A6A6A7");
+        clickButton = contantsChange.index(this);
         groupBlocks.hide();
-        selectButton = contantsChange.index(this);
-        $(this).find(".change-color").css("fill", colors[selectButton]);
-        $(this).find(".content-change__text").css("color", colors[selectButton]);
-        groupBlocks.eq(selectButton).show();
+        changeColor.css("fill", "#9B9B9B");
+        changeText.css("color", "#9B9B9B");
+        contantsChange.eq(clickButton).find(".change-color").css("fill", colors[clickButton]);
+        changeText.eq(clickButton).css("color", colors[clickButton]);
+        groupBlocks.eq(clickButton).show();
     }
 );
-function initButton() {
-    contantsChange.first().find(".change-color").css("fill", colors[0]);
-    contantsChange.first().find(".content-change__text").css("color", colors[0]);
+function firstColorSvg() {
+    changeColor.eq(0).css("fill", "#F25322");
+    changeText.eq(0).css("color", "#F25322");
 }
-
-menuItems.children(".nav-arrow").click(
+contantsChange.hover(
     function () {
-        indexNavList = menuItems.index($(this).parent());
-        let selectMenuItem = menuItems.eq(indexNavList);
-        let isShow = selectMenuItem.children(".nav-list").is(":visible");
-        menuItems.children(".nav-list").hide();
-        menuItems.children(".nav-links").css("color", "#aaaaab");
-        if (isShow) {
-            selectMenuItem.children(".nav-list").hide();
-            selectMenuItem.children(".nav-links").css("color", "#aaaaab");
-        }
-        else {
-            selectMenuItem.children(".nav-list").show();
-            selectMenuItem.children(".nav-links").css("color", "#fab81b");
+        hoverSvg = contantsChange.index(this);
+        contantsChange.eq(hoverSvg).find(".change-color").css("fill", colors[hoverSvg]);
+        changeText.eq(hoverSvg).css("color", colors[hoverSvg]);
+    },
+    function () {
+        if (clickButton != hoverSvg) {
+            contantsChange.eq(hoverSvg).find(".change-color").css("fill", "#9B9B9B");
+            changeText.eq(hoverSvg).css("color", "#9B9B9B");
         }
     }
 );
+navArrow.click(
+    function () {
+        indexNavList = navArrow.index(this);
+        let hideList = navList.eq(indexNavList).is(":visible");
+        navLinks.css("color", "#aaaaab");
+        menuItems.eq(indexNavList).children(".nav-links").css("color", "#fab81b");
+        navList.hide();
+        navList.eq(indexNavList).show();
+        if (hideList) {
+            menuItems.eq(indexNavList).children(".nav-links").css("color", "#aaaaab");
+            navList.eq(indexNavList).hide();
+        }
+    }
+)
