@@ -12,6 +12,8 @@ let navArrow = $(".nav-arrow");
 let menuItems = $(".main-menu__items").has(".nav-arrow");
 let navLinks = $(".nav-links");
 let navList = $(".nav-list");
+let tenYears = $(".ten-years");
+let tenYearsHover = $(".ten-years__logo-hover");
 let indexNavList = 0;
 let hoverSvg = 0;
 let clickButton = 0;
@@ -63,4 +65,12 @@ navArrow.click(
             navList.eq(indexNavList).hide();
         }
     }
-)
+);
+tenYears.hover(
+    function () {
+        tenYearsHover.addClass("rotate-hover");
+    },
+    function () {
+        tenYearsHover.removeClass("rotate-hover");
+    }
+);
