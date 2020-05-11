@@ -451,31 +451,47 @@ header {
         height: 44px;
         width: 128px; }
       .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years {
-        height: 65px; }
-        .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years__logo {
+        position: relative;
+        height: 65px;
+        width: 70px; }
+        .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years::before {
           background: url(../images/10-year/10-year-icon.png) center/contain;
+          margin: 10px 0 0 0px;
           position: absolute;
-          margin-top: 10px;
-          z-index: 10;
-          float: left;
+          content: "";
+          z-index: 12;
           height: 44px;
           width: 44px; }
-        .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years__logo-hover {
+        .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years::after {
+          content: "";
           background: url(../images/10-year/10y-icon-hover.png) center;
+          -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
           -webkit-transition: opacity .7s;
           -o-transition: opacity .7s;
           transition: opacity .7s;
-          margin: -13px 0 0 -13px;
-          background-size: 150%;
+          margin: -29px 0 0 -96px;
+          background-size: 130%;
           position: absolute;
           pointer-events: none;
           opacity: 0;
-          float: left;
-          height: 90px;
-          width: 70px; }
+          height: 120px;
+          width: 100px;
+          z-index: 10; }
+        .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years:hover::after {
+          opacity: 1; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
         .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years .rotate-hover {
-          opacity: 1;
-          pointer-events: initial; }
+          opacity: 1; }
         .main-heading .nav-menu .menu-registration .main-menu__items:nth-child(5) .ten-years__text {
           background: -webkit-gradient(linear, left bottom, left top, from(#d19235), color-stop(8%, #cd6a11), color-stop(26%, #d87519), color-stop(61%, #f2bf65), to(#ffff91));
           background: -webkit-linear-gradient(bottom, #d19235 0%, #cd6a11 8%, #d87519 26%, #f2bf65 61%, #ffff91 100%);
@@ -514,22 +530,34 @@ header {
       width: 185px;
       height: 44px; }
       .main-heading .nav-menu .menu-registration .registration__text {
-        font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
+        position: relative;
+        z-index: 31;
         font-weight: 700;
         line-height: 45px;
         color: #f9f5e1;
         font-size: 12px;
         text-align: center;
         display: block; }
-      .main-heading .nav-menu .menu-registration .registration:hover {
+      .main-heading .nav-menu .menu-registration .registration:before {
         background: -webkit-gradient(linear, left top, left bottom, from(#fab81b), to(#ff7e00)) no-repeat 0, -webkit-gradient(linear, left top, left bottom, from(#fab81b), to(#ff7e00)) no-repeat 100%, #ff7e00 -webkit-gradient(linear, left top, left bottom, from(#ff7e00), to(#c2530a)) no-repeat;
         background: -webkit-linear-gradient(top, #fab81b 0%, #ff7e00 100%) no-repeat 0, -webkit-linear-gradient(top, #fab81b 0%, #ff7e00 100%) no-repeat 100%, #ff7e00 -webkit-linear-gradient(top, #ff7e00 0%, #c2530a 100%) no-repeat;
         background: -o-linear-gradient(top, #fab81b 0%, #ff7e00 100%) no-repeat 0, -o-linear-gradient(top, #fab81b 0%, #ff7e00 100%) no-repeat 100%, #ff7e00 -o-linear-gradient(top, #ff7e00 0%, #c2530a 100%) no-repeat;
         background: linear-gradient(to bottom, #fab81b 0%, #ff7e00 100%) no-repeat 0, linear-gradient(to bottom, #fab81b 0%, #ff7e00 100%) no-repeat 100%, #ff7e00 linear-gradient(to bottom, #ff7e00 0%, #c2530a 100%) no-repeat;
         -webkit-box-shadow: inset 0 0 8px rgba(255, 210, 0, 0.1), inset 0 1px 0 #fab81b, inset 0 -1px 0 #ff7e00;
         box-shadow: inset 0 0 8px rgba(255, 210, 0, 0.1), inset 0 1px 0 #fab81b, inset 0 -1px 0 #ff7e00;
-        background-size: 1px 100%,1px 100%,cover; }
+        background-size: 1px 100%,1px 100%,cover;
+        position: absolute;
+        -webkit-transition: opacity .3s;
+        -o-transition: opacity .3s;
+        transition: opacity .3s;
+        opacity: 0;
+        content: "";
+        z-index: 30;
+        width: 185px;
+        height: 44px; }
+      .main-heading .nav-menu .menu-registration .registration:hover:before {
+        opacity: 1; }
 
 .main-heading .container-box {
   width: 1330px;
