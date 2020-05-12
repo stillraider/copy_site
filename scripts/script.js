@@ -74,5 +74,6 @@ cross.click(
         promoTitle.toggleClass("under-wot");
         logoWot.toggleClass("over-wot");
         limitedHeight.toggleClass("low-block");
+        cross.toggleClass("jackdaw");
     }
 )

@@ -71,6 +71,9 @@ header .common_menu .left_menu .additional_tab .logo, header .common_menu .left_
   -ms-flex-align: center;
   align-items: center; }
 
+body {
+  background: #1C1C1E; }
+
 header {
   width: 100%;
   height: 37px;
@@ -562,6 +565,9 @@ header {
 .main-heading .cross {
   background: url(../images/icon/cross.svg) center no-repeat;
   background-color: rgba(0, 0, 0, 0.35);
+  -webkit-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
   position: absolute;
   margin-top: 20px;
   cursor: pointer;
@@ -569,6 +575,14 @@ header {
   width: 32px;
   height: 32px;
   right: 20px; }
+  .main-heading .cross:hover {
+    background-color: rgba(249, 245, 225, 0.25); }
+
+.main-heading .jackdaw {
+  background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
 
 .main-heading .container-box {
   font-family: Arial, Helvetica, sans-serif;

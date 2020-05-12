@@ -4,6 +4,9 @@
     display: flex;
     align-items: center;
 }
+body {
+    background: #1C1C1E;
+}
 
 header {
     width: 100%;
@@ -536,6 +539,7 @@ header {
     .cross {
         background: url(../images/icon/cross.svg) center no-repeat;
         background-color: rgba(0,0,0,.35);
+        transition: background-color .2s;
         position: absolute;
         margin-top: 20px;
         cursor: pointer;
@@ -543,6 +547,13 @@ header {
         width: 32px;
         height: 32px;
         right: 20px;
+        &:hover {
+            background-color: rgba(249,245,225,.25);
+        }
+    }
+    .jackdaw {
+        background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
+        transform: rotate(180deg);
     }
     .container-box {
         font-family: Arial, Helvetica, sans-serif;
