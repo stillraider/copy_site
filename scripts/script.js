@@ -13,6 +13,10 @@ let menuItems = $(".main-menu__items").has(".nav-arrow");
 let navLinks = $(".nav-links");
 let navList = $(".nav-list");
 let tenYears = $(".ten-years");
+let cross = $(".cross");
+let promoTitle = $(".promo-title");
+let limitedHeight = $(".limited-height");
+let logoWot = $(".logo-wot");
 let indexNavList = 0;
 let hoverSvg = 0;
 let clickButton = 0;
@@ -65,3 +69,10 @@ navArrow.click(
         }
     }
 );
+cross.click(
+    function () {
+        promoTitle.toggleClass("under-wot");
+        logoWot.toggleClass("over-wot");
+        limitedHeight.toggleClass("low-block");
+    }
+)

@@ -559,6 +559,134 @@ header {
       .main-heading .nav-menu .menu-registration .registration:hover:before {
         opacity: 1; }
 
+.main-heading .cross {
+  background: url(../images/icon/cross.svg) center no-repeat;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  margin-top: 20px;
+  cursor: pointer;
+  z-index: 50;
+  width: 32px;
+  height: 32px;
+  right: 20px; }
+
 .main-heading .container-box {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 50;
   width: 1330px;
   margin: 0 auto; }
+  .main-heading .container-box .promo-block {
+    margin: 0 auto;
+    width: 675px; }
+    .main-heading .container-box .promo-block .limited-height {
+      -webkit-transition: all .25s ease-in-out;
+      -o-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+      overflow: hidden;
+      height: 300px; }
+      .main-heading .container-box .promo-block .limited-height .promo-title {
+        -webkit-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        padding: 80px 0; }
+        .main-heading .container-box .promo-block .limited-height .promo-title__title {
+          font-size: 41px;
+          font-weight: 600;
+          line-height: 46px;
+          color: #f9f5e1;
+          text-align: center; }
+        .main-heading .container-box .promo-block .limited-height .promo-title__text {
+          margin-bottom: 25px;
+          line-height: 24px;
+          color: #e9e2bf;
+          font-size: 17px; }
+        .main-heading .container-box .promo-block .limited-height .promo-title .learn-more {
+          margin: 0 auto;
+          width: 160px;
+          height: 44px; }
+          .main-heading .container-box .promo-block .limited-height .promo-title .learn-more__text {
+            border: 2px solid #f9f5e1;
+            -webkit-transition: background .15s;
+            -o-transition: background .15s;
+            transition: background .15s;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            color: #f9f5e1;
+            font-size: 13px;
+            display: block; }
+          .main-heading .container-box .promo-block .limited-height .promo-title .learn-more:hover .learn-more__text {
+            background: #f9f5e1;
+            color: #474747; }
+      .main-heading .container-box .promo-block .limited-height .logo-wot {
+        background: url(../images/logo-wot/logo.png) center/contain no-repeat;
+        -webkit-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        opacity: 0;
+        margin: 0 auto;
+        width: 272px;
+        height: 135px; }
+      .main-heading .container-box .promo-block .limited-height .under-wot {
+        margin-top: -270px;
+        opacity: 0; }
+      .main-heading .container-box .promo-block .limited-height .over-wot {
+        opacity: 1; }
+    .main-heading .container-box .promo-block .low-block {
+      height: 180px; }
+
+.main-heading .slider-store {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 50;
+  width: 1330px;
+  margin: 0 auto; }
+  .main-heading .slider-store .slider-block {
+    background: #4b4b4e;
+    width: 986px;
+    height: 200px; }
+  .main-heading .slider-store .block-store {
+    height: 200px;
+    width: 302px; }
+    .main-heading .slider-store .block-store .link-store {
+      position: absolute;
+      overflow: hidden;
+      width: 302px;
+      height: 200px; }
+      .main-heading .slider-store .block-store .link-store .premium-store {
+        display: block;
+        height: 200px; }
+        .main-heading .slider-store .block-store .link-store .premium-store:before {
+          content: "";
+          position: absolute;
+          background: url(../images/premium-store/wot_premshop-banner_ru_NO21NQQ.jpg) center/cover;
+          -webkit-transition: all .5s;
+          -o-transition: all .5s;
+          transition: all .5s;
+          width: 302px;
+          height: 200px;
+          display: block; }
+        .main-heading .slider-store .block-store .link-store .premium-store:hover:before {
+          background-color: rgba(14, 14, 15, 0.5);
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1); }
+        .main-heading .slider-store .block-store .link-store .premium-store:after {
+          content: "";
+          position: absolute;
+          background-color: rgba(14, 14, 15, 0.5);
+          -webkit-transition: all .5s;
+          -o-transition: all .5s;
+          transition: all .5s;
+          width: 302px;
+          height: 200px;
+          opacity: 0; }
+        .main-heading .slider-store .block-store .link-store .premium-store:hover:after {
+          opacity: 1; }
