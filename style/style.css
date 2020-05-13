@@ -668,40 +668,49 @@ header {
     .main-heading .slider-store .slider-block .slider-width {
       width: 1972px;
       height: 100%; }
-      .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel {
-        background: url(../images/slider/1-9-update.jpg) no-repeat;
+      .main-heading .slider-store .slider-block .slider-width .slider-carousel {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        -webkit-transition: background .5s;
-        -o-transition: background .5s;
-        transition: background .5s;
-        background-position: right;
-        background-size: 62.4%;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        position: absolute;
+        overflow: hidden;
         cursor: pointer;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         height: 200px;
         width: 986px; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel:before {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel .slider-img {
+          background: url(../images/slider/1-9-update.jpg) no-repeat;
+          background-position: right;
+          -webkit-transition: all .5s;
+          -o-transition: all .5s;
+          transition: all .5s;
+          position: absolute;
+          height: 200px;
+          width: 986px; }
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel:hover .slider-img {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1); }
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel:before {
           background-image: -webkit-gradient(linear, left top, right top, color-stop(37.6%, #0e0e0f), to(transparent));
           background-image: -webkit-linear-gradient(left, #0e0e0f 37.6%, transparent 100%);
           background-image: -o-linear-gradient(left, #0e0e0f 37.6%, transparent 100%);
           background-image: linear-gradient(to right, #0e0e0f 37.6%, transparent 100%);
           border-left: 2px solid #F25322;
           background-color: transparent;
-          -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
           position: absolute;
           height: 200px;
           width: 986px;
           content: "";
           z-index: 50; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel:after {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel:after {
           background: rgba(0, 0, 0, 0.301);
           -webkit-transition: all .5s;
           -o-transition: all .5s;
@@ -711,7 +720,7 @@ header {
           height: 200px;
           width: 986px;
           content: ""; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel__arrows-one, .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel__arrows-two {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel__arrows-one, .main-heading .slider-store .slider-block .slider-width .slider-carousel__arrows-two {
           -webkit-transition: opacity .3s;
           -o-transition: opacity .3s;
           transition: opacity .3s;
@@ -719,13 +728,13 @@ header {
           z-index: 50;
           height: 200px;
           width: 45px; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel__arrows-one {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel__arrows-one {
           background: url(../images/slider/arrow/arrow-left-slider.svg) center no-repeat; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel__arrows-two {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel__arrows-two {
           background: url(../images/slider/arrow/arrow-right-slider.svg) center no-repeat; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel__arrows-one:hover, .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel__arrows-two:hover {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel__arrows-one:hover, .main-heading .slider-store .slider-block .slider-width .slider-carousel__arrows-two:hover {
           opacity: .5; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel__text {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel__text {
           font-family: Arial, Helvetica, sans-serif;
           text-transform: uppercase;
           margin: 0 0 27px 23px;
@@ -737,10 +746,7 @@ header {
           font-size: 28px;
           z-index: 50;
           width: 410px; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel:hover {
-          background-size: 67%;
-          background-position: 112%; }
-        .main-heading .slider-store .slider-block .slider-width .slider-img .slider-carousel:hover:after {
+        .main-heading .slider-store .slider-block .slider-width .slider-carousel:hover:after {
           opacity: 1; }
   .main-heading .slider-store .block-store {
     height: 200px;
