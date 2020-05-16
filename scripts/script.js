@@ -22,6 +22,11 @@ let left = 0;
 let indexLeft = 0;
 let sliderArrowsTwo = $(".slider-block__arrows-two");
 let sliderArrowsOne = $(".slider-block__arrows-one");
+let linkImg = $(".news-link__img");
+let smallNews = $(".small-news");
+let textNews = $(".text-news");
+let textLink = $(".news-link");
+let indexHover = 0;
 let indexNavList = 0;
 let hoverSvg = 0;
 let clickButton = 0;
@@ -81,10 +86,19 @@ cross.click(
         limitedHeight.toggleClass("low-block");
         cross.toggleClass("jackdaw");
     }
-)
+);
 sliderArrowsTwo.on("click",
     function () {
         indexLeft++;
         sliderCarousel.eq(indexLeft).css("left", left);
     }
-)
+);
+let hoverOn = function () {
+    indexHover = textNews.index(this) + textLink.index(this)+1;
+    linkImg.eq(indexHover).css("transform", "scale(1.1)");
+}
+let hoverOff = function () {
+    linkImg.eq(indexHover).css("transform", "scale(1)");
+}
+textNews.hover(hoverOn, hoverOff);
+textLink.hover(hoverOn, hoverOff);
