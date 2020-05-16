@@ -8,7 +8,7 @@ body {
     background: #1C1C1E;
 }
 
-header {
+.common-header {
     width: 100%;
     height: 37px;
     background: black;
@@ -636,6 +636,8 @@ header {
             z-index: 50;
             width: 986px;
             .slider-block {
+                position: relative;
+                overflow: hidden;
                 width: 986px;
                 height: 200px;
                 &__arrows-one, &__arrows-two {
@@ -801,6 +803,135 @@ header {
                     }
                     &:hover:after {
                         opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+.latest-news {
+    font-family: Arial, Helvetica, sans-serif;
+    .central-columns {
+        width: 1330px;
+        margin: 0 auto;
+        .columns-header {
+            margin: 50px 0 25px 0;
+            &__title {
+                text-transform: uppercase;
+                line-height: 21px;
+                font-weight: 700;
+                color: #e9e2bf;
+                font-size: 22px;
+            }
+        }
+        .flex-blcks {
+            display: flex;
+            .three-columns {
+                padding-right: 20px;
+                &:nth-child(1), &:nth-child(2) {
+                    border-right: 1px solid rgba(233,226,191,.15);
+                }
+                &:nth-child(2), &:nth-child(3) {
+                    padding: 0 20px;
+                    .small-news {
+                        margin-bottom: 40px;
+                        display: flex;
+                        .news-link {
+                            position: relative;
+                            margin-right: 20px;
+                            width: 191px;
+                            height: 107px;
+                            &__img {
+                                background: url(../images/news-img/20.05.14_10ani_act_2_1_1.jpg) center/contain no-repeat;
+                                width: 191px;
+                                height: 107px;
+                            }
+                            &__img::before {
+                                display: none;
+                            }
+                        }
+                        .news-info {
+                            background: initial;
+                            width: 200px;
+                            padding: 0;
+                            .text-news {
+                                &__text {
+                                    margin-bottom: 0;
+                                    line-height: 22px;
+                                    font-size: 17px;
+                                }
+                                &__text:nth-child(2) {
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    line-height: 16px;
+                                    margin: 8px 0 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .small-news {
+                    width: 416px;
+                    .news-link {
+                        position: relative;
+                        overflow: hidden;
+                        display: block;
+                        width: 100%;
+                        height: 234px;
+                        &__img {
+                            background: url(../images/news-img/mortal-race-4.jpg) center/contain no-repeat;
+                            transition: all .5s;
+                            display: block;
+                            width: 100%;
+                            height: 234px;
+                        }
+                        &__img::before {
+                            background-image: linear-gradient(to bottom,transparent 50%,#0e0e0f 100%);
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            content: "";
+                        }
+                        &__img::after {
+                            background-color: rgba(14,14,15,.5);
+                            transition: opacity .5s;
+                            position: absolute;
+                            opacity: 0;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            content: "";
+                        }
+                        &:hover .news-link__img::after  {
+                            opacity: 1;
+                        }
+                        &:hover .news-link__img {
+                           transform: scale(1.1);
+                        }
+                    }
+                    .news-info {
+                        padding: 0 32px 27px;
+                        background: #0E0E0F;
+                        .text-news {
+                            display: block;
+                            &__text {
+                                margin-bottom: 12px;
+                                line-height: 34px;
+                                font-weight: 600;
+                                color: #e9e2bf;
+                                font-size: 24px;
+                                display: block;
+                            }
+                            &__text:nth-child(2) {
+                                margin: 11px 0 10px;
+                                line-height: 18px;
+                                color: #7c7967;
+                                font-size: 15px;
+                            }
+                        }
                     }
                 }
             }

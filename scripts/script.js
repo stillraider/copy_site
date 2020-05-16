@@ -17,6 +17,11 @@ let cross = $(".cross");
 let promoTitle = $(".promo-title");
 let limitedHeight = $(".limited-height");
 let logoWot = $(".logo-wot");
+let sliderCarousel = $(".slider-carousel");
+let left = 0;
+let indexLeft = 0;
+let sliderArrowsTwo = $(".slider-block__arrows-two");
+let sliderArrowsOne = $(".slider-block__arrows-one");
 let indexNavList = 0;
 let hoverSvg = 0;
 let clickButton = 0;
@@ -75,5 +80,11 @@ cross.click(
         logoWot.toggleClass("over-wot");
         limitedHeight.toggleClass("low-block");
         cross.toggleClass("jackdaw");
+    }
+)
+sliderArrowsTwo.on("click",
+    function () {
+        indexLeft++;
+        sliderCarousel.eq(indexLeft).css("left", left);
     }
 )
