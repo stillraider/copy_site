@@ -26,6 +26,7 @@ let linkImg = $(".news-link__img");
 let smallNews = $(".small-news");
 let textNews = $(".text-news");
 let textLink = $(".news-link");
+let linkShadow = $(".news-link-shadow");
 let indexHover = 0;
 let indexNavList = 0;
 let hoverSvg = 0;
@@ -96,9 +97,11 @@ sliderArrowsTwo.on("click",
 let hoverOn = function () {
     indexHover = textNews.index(this) + textLink.index(this)+1;
     linkImg.eq(indexHover).css("transform", "scale(1.1)");
+    linkShadow.eq(indexHover).css("opacity", "1");
 }
 let hoverOff = function () {
     linkImg.eq(indexHover).css("transform", "scale(1)");
+    linkShadow.eq(indexHover).css("opacity", "0");
 }
 textNews.hover(hoverOn, hoverOff);
 textLink.hover(hoverOn, hoverOff);
