@@ -102,3 +102,21 @@ let hoverOff = function () {
 }
 textNews.hover(hoverOn, hoverOff);
 textLink.hover(hoverOn, hoverOff);
+
+function moving() {
+    let width = 0;
+    if (window.innerHeight) {
+        width = window.innerWidth;
+    }
+    if (width < 1190) {
+        $('.three-columns:nth-child(2)').append( $('.three-columns:nth-child(1)>.small-news'));
+    }
+    else {
+        $('.three-columns:nth-child(1)').append( $('.three-columns:nth-child(2)>.small-news:nth-child(4)') );
+    }
+}
+let fun = function () {
+    moving();
+}
+window.onresize = fun;
+fun();
