@@ -718,6 +718,130 @@ body {
   width: 22px;
   height: 22px;
 }
+.main-heading .nav-menu .nav-wrap {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  width: 100%;
+}
+.main-heading .nav-menu .nav-wrap__holder {
+  background-color: #1c1c1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: scroll;
+  max-width: 315px;
+  width: 100%;
+  height: 100%;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu__items {
+  background-color: #27272b;
+  border-bottom: 1px solid #333335;
+  border-top: 1px solid #1c1c1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 61px;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu__links {
+  text-transform: uppercase;
+  margin-left: 30px;
+  color: #aaaaab;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu__cross {
+  background: url(../images/nav-wrap/cross-button.svg) center/contain no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-left: auto;
+  right: 15px;
+  position: relative;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu__text {
+  background: -webkit-gradient(linear, left bottom, left top, from(#d19235), color-stop(8%, #cd6a11), color-stop(26%, #d87519), color-stop(61%, #f2bf65), to(#ffff91));
+  background: -o-linear-gradient(bottom, #d19235 0%, #cd6a11 8%, #d87519 26%, #f2bf65 61%, #ffff91 100%);
+  background: linear-gradient(to top, #d19235 0%, #cd6a11 8%, #d87519 26%, #f2bf65 61%, #ffff91 100%);
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  color: transparent;
+  line-height: 65px;
+  font-weight: 600;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu__logo {
+  background: url(../images/10-year/10-year-icon.png) center/contain;
+  margin: 10px 0 0 0px;
+  display: block;
+  height: 44px;
+  width: 44px;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu .nav-detail {
+  display: none;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu .nav-detail__items {
+  background: #151515;
+  height: 58px;
+}
+.main-heading .nav-menu .nav-wrap__holder .sub-menu .nav-detail__links {
+  padding: 18px 16px 20px 50px;
+  color: #aaaaab;
+  display: block;
+  font-size: 18px;
+}
+.main-heading .nav-menu .nav-wrap__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main-heading .nav-menu .nav-wrap__registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #f25322;
+  height: 60px;
+  width: 100%;
+  max-width: 256px;
+  margin: 0 15px 25px;
+}
+.main-heading .nav-menu .nav-wrap__link {
+  color: #f25322;
+  text-transform: uppercase;
+  font-size: 18px;
+  display: block;
+}
+.main-heading .nav-menu .nav-wrap__jackdaw {
+  background: url(../images/nav-wrap/jackdaw.svg);
+  margin: 15px;
+  width: 16px;
+  height: 16px;
+}
+.main-heading .nav-menu .nav-wrap__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
 .main-heading .jackdaw {
   background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
   -webkit-transform: rotate(180deg);
@@ -733,7 +857,7 @@ body {
   position: absolute;
   margin-top: 20px;
   cursor: pointer;
-  z-index: 51;
+  z-index: 30;
   width: 32px;
   height: 32px;
   right: 20px;
@@ -1056,7 +1180,6 @@ body {
   display: none;
   width: 288px;
   height: 44px;
-  z-index: 51;
 }
 .main-heading .carousel-store .mini-store .premium-bag__img {
   background: url(../images/premium-store/logo_wot_store.svg) no-repeat;
@@ -1416,6 +1539,11 @@ body {
     height: 10.18vw !important;
   }
 }
+@media (min-width: 965px) {
+  .nav-wrap {
+    display: none;
+  }
+}
 @media (max-width: 965px) {
   .slider-store, .slider-block, .slider-carousel, .slider-img, .slider-carousel:before, .slider-carousel:after {
     width: calc(100vw * 0.6632) !important;
@@ -1543,9 +1671,34 @@ body {
   .promo-title__text {
     font-size: 15px !important;
   }
+
+  .slider-block__arrows-two, .slider-block__arrows-one {
+    width: 25px !important;
+  }
 }
 @media (max-width: 520px) {
   .promo-block__text {
     font-size: 14px !important;
+  }
+}
+@media (max-width: 580px) {
+  .footer-menu, .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 340px) {
+  .promo-title__title {
+    letter-spacing: -1px;
+    font-size: 30px !important;
   }
 }

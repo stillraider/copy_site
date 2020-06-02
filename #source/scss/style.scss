@@ -567,6 +567,105 @@ body {
                 }
             }
         }
+        .nav-wrap {
+            background-color: rgba(0,0,0,.9);
+            display: none;
+            width: 100%;
+            &__holder {
+                background-color: #1c1c1e;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: scroll;
+                max-width: 315px;
+                width: 100%;
+                height: 100%;
+                .sub-menu {
+                    &__items {
+                        background-color: #27272b;
+                        border-bottom: 1px solid #333335;
+                        border-top: 1px solid #1c1c1e;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 61px;
+                    }
+                    &__links {
+                        text-transform: uppercase;
+                        margin-left: 30px;
+                        color: #aaaaab;
+                        font-size: 18px;
+                        display: flex;
+                    }
+                    &__cross {
+                        background: url(../images/nav-wrap/cross-button.svg) center/contain no-repeat;
+                        width: 12px;
+                        height: 12px;
+                        margin-left: auto;
+                        right: 15px;
+                        position: relative;
+                    }
+                    &__text {
+                        background: linear-gradient(to top, #d19235 0%, #cd6a11 8%, #d87519 26%, #f2bf65 61%, #ffff91 100%);
+                        -webkit-background-clip: text;
+                        text-transform: uppercase;
+                        color: transparent;
+                        line-height: 65px;
+                        font-weight: 600;
+                    }
+                    &__logo {
+                        background: url(../images/10-year/10-year-icon.png) center/contain;
+                        margin: 10px 0 0 0px;
+                        display: block;
+                        height: 44px;
+                        width: 44px;
+                    }
+                    .nav-detail {
+                        display: none;
+                        &__items {
+                            background: #151515;
+                            height: 58px;
+                        }
+                        &__links {
+                            padding: 18px 16px 20px 50px;
+                            color: #aaaaab;
+                            display: block;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            &__block {
+                display: flex;
+                justify-content: center;
+            }
+            &__registration {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #f25322;
+                height: 60px;
+                width: 100%;
+                max-width: 256px;
+                margin: 0 15px 25px;
+            }
+            &__link {
+                color: #f25322;
+                text-transform: uppercase;
+                font-size: 18px;
+                display: block;
+            }
+            &__jackdaw {
+                background: url(../images/nav-wrap/jackdaw.svg);
+                margin: 15px;
+                width: 16px;
+                height: 16px;
+            }
+            &__flex {
+                display: flex;
+                height: 100vh;
+            }
+        }
     }
     .jackdaw {
         background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
@@ -580,7 +679,7 @@ body {
             position: absolute;
             margin-top: 20px;
             cursor: pointer;
-            z-index: 51;
+            z-index: 30;
             width: 32px;
             height: 32px;
             right: 20px;
@@ -857,7 +956,6 @@ body {
                 display: none;
                 width: 288px;
                 height: 44px;
-                z-index: 51;
                 &__img {
                     background: url(../images/premium-store/logo_wot_store.svg) no-repeat;
                     display: block;
@@ -1204,6 +1302,11 @@ body {
         }
     }
 }
+@media (min-width: 965px) {
+    .nav-wrap {
+        display: none;
+    }
+}
 @media (max-width: 965px) {
     .slider-store, .slider-block, .slider-carousel, .slider-img, .slider-carousel:before, .slider-carousel:after {
         width: calc(100vw * 0.6632) !important;
@@ -1321,9 +1424,27 @@ body {
     .promo-title__text {
         font-size: 15px !important;
     }
+    .slider-block__arrows-two, .slider-block__arrows-one {
+        width: 25px !important;
+    }
 }
 @media (max-width: 520px) {
     .promo-block__text {
         font-size: 14px !important;
+    }
+}
+@media (max-width: 580px) {
+    .footer-menu, .footer-list  {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-logo {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 340px) {
+    .promo-title__title {
+        letter-spacing: -1px;
+        font-size: 30px !important;
     }
 }

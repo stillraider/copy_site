@@ -1,7 +1,5 @@
 let dropdown = $(".dropdown");
 let showcase = $(".showcase");
-let showblock = $(".showblock");
-let rotate = $(".rotate");
 let checkMark = $(".showcase__check-mark");
 let changeColor = $(".change-color");
 let colors = ["#F25322","#00CBCD","#1E5AFF","#F49511","#FFC83C","#D19834"];
@@ -13,9 +11,6 @@ let menuItems = $(".main-menu__items").has(".nav-arrow");
 let navLinks = $(".nav-links");
 let navList = $(".nav-list");
 let cross = $(".cross");
-let promoTitle = $(".promo-title");
-let limitedHeight = $(".limited-height");
-let logoWot = $(".logo-wot");
 let sliderCarousel = $(".slider-carousel");
 let left = 0;
 let indexLeft = 0;
@@ -24,18 +19,25 @@ let linkImg = $(".news-link__img");
 let textNews = $(".text-news");
 let textLink = $(".news-link");
 let linkShadow = $(".news-link-shadow");
+let subMenuCross = $(".sub-menu__cross");
+let navDetail = $(".nav-detail");
+let subMenuLinks = $(".sub-menu__links");
+let navWrap = $(".nav-wrap");
+let navBlocks = $(".nav-blocks");
+let navJackdaw = $(".nav-wrap__jackdaw");
+let html = $("html");
 let indexHover = 0;
 let indexNavList = 0;
 let hoverSvg = 0;
 let clickButton = 0;
 firstColorSvg();
-showcase.click(
+showcase.on("click",
     function () {
         dropdown.toggleClass("showblock");
         checkMark.toggleClass("rotate");
     }
 );
-contantsChange.click(
+contantsChange.on("click",
     function () {
         clickButton = contantsChange.index(this);
         groupBlocks.hide();
@@ -63,7 +65,7 @@ contantsChange.hover(
         }
     }
 );
-navArrow.click(
+navArrow.on("click",
     function () {
         indexNavList = navArrow.index(this);
         let hideList = navList.eq(indexNavList).is(":visible");
@@ -77,11 +79,11 @@ navArrow.click(
         }
     }
 );
-cross.click(
+cross.on("click",
     function () {
-        promoTitle.toggleClass("under-wot");
-        logoWot.toggleClass("over-wot");
-        limitedHeight.toggleClass("low-block");
+        $(".promo-title").toggleClass("under-wot");
+        $(".logo-wot").toggleClass("over-wot");
+        $(".limited-height").toggleClass("low-block");
         cross.toggleClass("jackdaw");
     }
 );
@@ -120,3 +122,32 @@ let fun = function () {
 }
 window.onresize = fun;
 fun();
+
+subMenuCross.on("click",
+    function () {
+        let subIndex = subMenuCross.index(this);
+        let show = navDetail.eq(subIndex).is(":visible");
+        navDetail.hide();
+        navDetail.eq(subIndex).show();
+        subMenuLinks.css("color", "#aaaaab");
+        subMenuCross.css("background", "url(./images/nav-wrap/cross-button.svg) center/contain no-repeat");
+        subMenuCross.eq(subIndex).css("background","url(./images/nav-wrap/cross-top.svg) center/contain no-repeat");
+        if (show) {
+            navDetail.eq(subIndex).hide();
+            subMenuCross.eq(subIndex).css("background", "url(./images/nav-wrap/cross-button.svg) center/contain no-repeat");
+        }
+        else $(this).parent().children(".sub-menu__links").css("color", "#EAAD1C");
+    }
+)
+navBlocks.eq(0).on("click", 
+    function () {
+        navWrap.show();
+        html.css("overflow", "hidden");
+    }
+)
+navJackdaw.eq(0).on("click", 
+    function () {
+        navWrap.hide();
+        html.css("overflow", "inherit");
+    }
+)
