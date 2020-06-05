@@ -843,13 +843,6 @@ body {
   height: 100vh;
 }
 
-.jackdaw {
-  background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
 .main-headlines__cross {
   background: url(../images/icon/cross.svg) center no-repeat;
   background-color: rgba(0, 0, 0, 0.35);
@@ -947,6 +940,14 @@ body {
 }
 .main-headlines .low-block {
   height: 180px;
+}
+
+.jackdaw {
+  background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
+  background-color: rgba(0, 0, 0, 0.35);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .carousel-store {

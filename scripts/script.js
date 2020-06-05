@@ -11,19 +11,19 @@ let menuItems = $(".main-menu__items").has(".main-menu__nav-arrow");
 let navLinks = $(".main-menu__nav-links");
 let navList = $(".nav-list");
 let cross = $(".main-headlines__cross");
-let sliderCarousel = $(".slider-carousel");
+let sliderCarousel = $(".slider-block__carousel");
 let left = 0;
 let indexLeft = 0;
 let sliderArrowsTwo = $(".slider-block__arrows-two");
-let linkImg = $(".news-link__img");
-let textNews = $(".text-news");
-let textLink = $(".news-link");
-let linkShadow = $(".news-link-shadow");
+let linkImg = $(".three-columns__img");
+let textNews = $(".three-columns__block-news");
+let textLink = $(".three-columns__news-link");
+let linkShadow = $(".three-columns__link-shadow");
 let subMenuCross = $(".sub-menu__cross");
 let navDetail = $(".nav-detail");
 let subMenuLinks = $(".sub-menu__links");
 let navWrap = $(".nav-wrap");
-let navBlocks = $(".nav-blocks");
+let navBlocks = $(".nav__blocks");
 let navJackdaw = $(".nav-wrap__jackdaw");
 let html = $("html");
 let indexHover = 0;
@@ -81,9 +81,9 @@ navArrow.on("click",
 );
 cross.on("click",
     function () {
-        $(".promo-title").toggleClass("under-wot");
-        $(".logo-wot").toggleClass("over-wot");
-        $(".limited-height").toggleClass("low-block");
+        $(".main-headlines__promo-title").toggleClass("under-wot");
+        $(".main-headlines__logo-wot").toggleClass("over-wot");
+        $(".main-headlines__limited-height").toggleClass("low-block");
         cross.toggleClass("jackdaw");
     }
 );

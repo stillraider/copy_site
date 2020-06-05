@@ -668,10 +668,6 @@ body {
         }
     }
 }
-.jackdaw {
-    background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
-    transform: rotate(180deg);
-}
 .main-headlines {
     &__cross {
         background: url(../images/icon/cross.svg) center no-repeat;
@@ -761,6 +757,11 @@ body {
     .low-block {
         height: 180px;
     }
+}
+.jackdaw {
+    background: url(../images/logo-wot/jackdaw.svg) center no-repeat;
+    background-color: rgba(0, 0, 0, 0.35);
+    transform: rotate(180deg);
 }
 .carousel-store {
     display: flex;
