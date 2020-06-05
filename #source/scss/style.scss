@@ -853,47 +853,25 @@ body {
                 &:nth-child(2) {
                     left: 986px;
                     z-index: 12;
-                    .slider-block__img {
-                        background: url(../images/slider/playhome3.jpg) no-repeat;
-                        background-position: right;
-                    }
                 }
                 &:nth-child(3) {
                     left: 986px;
                     z-index: 13;
-                    .slider-block__img {
-                        background: url(../images/slider/Q2nHXES.jpg) no-repeat;
-                        background-position: right;
-                    }
                 }
                 &:nth-child(4) {
                     left: 986px;
                     z-index: 14;
-                    .slider-block__img{
-                        background: url(../images/slider/ref-2-0-615.jpg) no-repeat;
-                        background-position: right;
-                    }
                 }
                 &:nth-child(5) {
                     left: 986px;
                     z-index: 15;
-                    .slider-block__img {
-                        background: url(../images/slider/specialoffers.jpg) no-repeat;
-                        background-position: right;
-                    }
                 }
                 &:nth-child(6) {
                     left: 986px;
                     z-index: 16;
-                    .slider-block__img {
-                        background: url(../images/slider/wot_twitchprime.jpg) no-repeat;
-                        background-position: right;
-                    }
                 }
             }
             &__img  {
-                background: url(../images/slider/1-9-update.jpg) no-repeat;
-                background-position: right;
                 transition: all .5s;
                 position: absolute;
                 height: 200px;
@@ -1007,7 +985,6 @@ body {
                     width: 191px;
                     height: 107px;
                     .three-columns__img {
-                        background: url(../images/news-img/20.05.14_10ani_act_2_1_1.jpg) center/contain no-repeat;
                         width: 191px;
                         height: 107px;
                     }

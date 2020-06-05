@@ -1066,45 +1066,23 @@ body {
   left: 986px;
   z-index: 12;
 }
-.carousel-store .slider-store .slider-block__carousel:nth-child(2) .slider-block__img {
-  background: url(../images/slider/playhome3.jpg) no-repeat;
-  background-position: right;
-}
 .carousel-store .slider-store .slider-block__carousel:nth-child(3) {
   left: 986px;
   z-index: 13;
-}
-.carousel-store .slider-store .slider-block__carousel:nth-child(3) .slider-block__img {
-  background: url(../images/slider/Q2nHXES.jpg) no-repeat;
-  background-position: right;
 }
 .carousel-store .slider-store .slider-block__carousel:nth-child(4) {
   left: 986px;
   z-index: 14;
 }
-.carousel-store .slider-store .slider-block__carousel:nth-child(4) .slider-block__img {
-  background: url(../images/slider/ref-2-0-615.jpg) no-repeat;
-  background-position: right;
-}
 .carousel-store .slider-store .slider-block__carousel:nth-child(5) {
   left: 986px;
   z-index: 15;
-}
-.carousel-store .slider-store .slider-block__carousel:nth-child(5) .slider-block__img {
-  background: url(../images/slider/specialoffers.jpg) no-repeat;
-  background-position: right;
 }
 .carousel-store .slider-store .slider-block__carousel:nth-child(6) {
   left: 986px;
   z-index: 16;
 }
-.carousel-store .slider-store .slider-block__carousel:nth-child(6) .slider-block__img {
-  background: url(../images/slider/wot_twitchprime.jpg) no-repeat;
-  background-position: right;
-}
 .carousel-store .slider-store .slider-block__img {
-  background: url(../images/slider/1-9-update.jpg) no-repeat;
-  background-position: right;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -1241,7 +1219,6 @@ body {
   height: 107px;
 }
 .latest-news .three-columns:nth-child(2) .three-columns__small-news .three-columns__news-link .three-columns__img, .latest-news .three-columns:nth-child(3) .three-columns__small-news .three-columns__news-link .three-columns__img {
-  background: url(../images/news-img/20.05.14_10ani_act_2_1_1.jpg) center/contain no-repeat;
   width: 191px;
   height: 107px;
 }
