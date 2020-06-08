@@ -11,10 +11,6 @@ let menuItems = $(".main-menu__items").has(".main-menu__nav-arrow");
 let navLinks = $(".main-menu__nav-links");
 let navList = $(".nav-list");
 let cross = $(".main-headlines__cross");
-let sliderCarousel = $(".slider-block__carousel");
-let left = 0;
-let indexLeft = 0;
-let sliderArrowsTwo = $(".slider-block__arrows-two");
 let linkImg = $(".three-columns__img");
 let textNews = $(".three-columns__block-news");
 let textLink = $(".three-columns__news-link");
@@ -87,12 +83,7 @@ cross.on("click",
         cross.toggleClass("jackdaw");
     }
 );
-sliderArrowsTwo.on("click",
-    function () {
-        indexLeft++;
-        sliderCarousel.eq(indexLeft).css("left", left);
-    }
-);
+
 let hoverOn = function () {
     indexHover = textNews.index(this) + textLink.index(this)+1;
     linkImg.eq(indexHover).css("transform", "scale(1.1)");

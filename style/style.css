@@ -250,26 +250,26 @@ body {
 .dropdown .showcase-list__items:nth-child(3) {
   width: 120px;
 }
-.dropdown .showcase-list__items:nth-child(3) .content-change__text {
+.dropdown .showcase-list__items:nth-child(3) .showcase-list__text {
   margin-top: 19px;
 }
 .dropdown .showcase-list__items:nth-child(5) {
   width: 120px;
 }
-.dropdown .showcase-list__items:nth-child(5) .content-change__logo {
+.dropdown .showcase-list__items:nth-child(5) .showcase-list__change-logo {
   margin-top: 6px;
 }
-.dropdown .showcase-list__items:nth-child(5) .content-change__text {
+.dropdown .showcase-list__items:nth-child(5) .showcase-list__text {
   margin-top: 24px;
 }
 .dropdown .showcase-list__items:nth-child(6) {
   width: 120px;
   margin-right: 0;
 }
-.dropdown .showcase-list__items:nth-child(6) .content-change__logo {
+.dropdown .showcase-list__items:nth-child(6) .showcase-list__change-logo {
   margin-top: 10px;
 }
-.dropdown .showcase-list__items:nth-child(6) .content-change__text {
+.dropdown .showcase-list__items:nth-child(6) .showcase-list__text {
   margin-top: 24px;
 }
 .dropdown .group-blocks {
@@ -737,7 +737,9 @@ body {
           justify-content: space-between;
   overflow: scroll;
   max-width: 315px;
-  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 315px;
+          flex: 0 0 315px;
   height: 100%;
 }
 .main-heading .nav-wrap__holder .sub-menu__items {
@@ -831,10 +833,10 @@ body {
   display: block;
 }
 .main-heading .nav-wrap__jackdaw {
-  background: url(../images/nav-wrap/jackdaw.svg);
+  background: url(../images/nav-wrap/jackdaw.svg) no-repeat;
   margin: 15px;
-  width: 16px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
 }
 .main-heading .nav-wrap__flex {
   display: -webkit-box;
@@ -1000,8 +1002,6 @@ body {
 .carousel-store .slider-store .slider-block__text {
   text-transform: uppercase;
   margin: 0 0 27px 75px;
-  margin-right: auto;
-  position: relative;
   line-height: 35px;
   color: #e9e2bf;
   font-weight: 700;
@@ -1010,12 +1010,6 @@ body {
   width: 410px;
 }
 .carousel-store .slider-store .slider-block__carousel {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-transition: all 0.9s;
-  -o-transition: all 0.9s;
-  transition: all 0.9s;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1081,6 +1075,9 @@ body {
 .carousel-store .slider-store .slider-block__carousel:nth-child(6) {
   left: 986px;
   z-index: 16;
+}
+.carousel-store .slider-store .slider-block__links {
+  display: block;
 }
 .carousel-store .slider-store .slider-block__img {
   -webkit-transition: all 0.5s;
@@ -1158,6 +1155,7 @@ body {
           align-items: center;
   position: relative;
   display: none;
+  z-index: 30;
   width: 288px;
   height: 44px;
 }
@@ -1674,6 +1672,18 @@ body {
 
   .footer-wrap__logo {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 360px) {
+  .nav-wrap__holder {
+    width: 100%;
+    -webkit-box-flex: initial !important;
+        -ms-flex: initial !important;
+            flex: initial !important;
+  }
+
+  .nav-wrap__jackdaw {
+    width: 18px !important;
   }
 }
 @media (max-width: 340px) {

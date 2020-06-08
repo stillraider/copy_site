@@ -144,26 +144,26 @@ body {
         }
         &__items:nth-child(3) {
             width: 120px;
-            .content-change__text {
+            .showcase-list__text {
                 margin-top: 19px;
             }
         }
         &__items:nth-child(5) {
             width: 120px;
-            .content-change__logo {
+            .showcase-list__change-logo {
                 margin-top: 6px;
             }
-            .content-change__text{
+            .showcase-list__text {
                 margin-top: 24px;
             }
         }
         &__items:nth-child(6) {
             width: 120px;
             margin-right: 0;
-            .content-change__logo {
+            .showcase-list__change-logo {
                 margin-top: 10px;
             }
-            .content-change__text {
+            .showcase-list__text {
                 margin-top: 24px;
             }
         }
@@ -579,7 +579,7 @@ body {
             justify-content: space-between;
             overflow: scroll;
             max-width: 315px;
-            width: 100%;
+            flex: 0 0 315px;
             height: 100%;
             .sub-menu {
                 &__items {
@@ -657,10 +657,10 @@ body {
             display: block;
         }
         &__jackdaw {
-            background: url(../images/nav-wrap/jackdaw.svg);
+            background: url(../images/nav-wrap/jackdaw.svg) no-repeat;
             margin: 15px;
-            width: 16px;
-            height: 16px;
+            width: 100%;
+            height: 100%;
         }
         &__flex {
             display: flex;
@@ -804,8 +804,6 @@ body {
             &__text {
                 text-transform: uppercase;
                 margin: 0 0 27px 75px;
-                margin-right: auto;
-                position: relative;
                 line-height: 35px;
                 color: #e9e2bf;
                 font-weight: 700;
@@ -814,8 +812,6 @@ body {
                 width: 410px;
             }
             &__carousel {
-                justify-content: space-between;
-                transition: all .9s;
                 align-items: center;
                 position: absolute;
                 overflow: hidden;
@@ -870,6 +866,9 @@ body {
                     left: 986px;
                     z-index: 16;
                 }
+            }
+            &__links {
+                display: block;
             }
             &__img  {
                 transition: all .5s;
@@ -932,6 +931,7 @@ body {
             align-items: center;
             position: relative;
             display: none;
+            z-index: 30;
             width: 288px;
             height: 44px;
         }
@@ -1419,6 +1419,15 @@ body {
     }
     .footer-wrap__logo {
         margin-bottom: 15px;
+    }
+}
+@media (max-width: 360px) {
+    .nav-wrap__holder {
+        width: 100%;
+        flex: initial !important;
+    }
+    .nav-wrap__jackdaw {
+        width: 18px !important;
     }
 }
 @media (max-width: 340px) {
