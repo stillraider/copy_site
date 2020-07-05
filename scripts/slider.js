@@ -2,7 +2,7 @@ let sliderCarousel = $(".slider-block__carousel");
 let countAnchor = 0;
 let widthElement = 0;
 
-var imgs = ['./images/slider/1-9-update.jpg', './images/slider/playhome3.jpg', './images/slider/Q2nHXES.jpg', './images/slider/ref-2-0-615.jpg', './images/slider/specialoffers.jpg', './images/slider/wot_twitchprime.jpg'];
+var imgs = ['img/slider/1-9-update.jpg', 'img/slider/playhome3.jpg', 'img/slider/Q2nHXES.jpg', 'img/slider/ref-2-0-615.jpg', 'img/slider/specialoffers.jpg', 'img/slider/wot_twitchprime.jpg'];
 var labels = ['Обновление 1.9. Актуальная версия игры', 'Участвуй в онлайн-турнирах', 'Боевой пропуск: уникальные награды в случайных боях', 'Реферальная программа 2.0: третий сезона', 'Специальные предложения', 'Акция «Прямой эфир». Набор «Звёздная ночь»'];
 
 function AddBlockSlider(index, isLast) {
@@ -27,7 +27,6 @@ else
 }
 
 widthElement = AddBlockSlider(0, true).width();
-console.log(widthElement);
 
 $( window ).resize(function() {
     widthElement = $(".slider-block__carousel").first().width();

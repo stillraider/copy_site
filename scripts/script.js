@@ -103,11 +103,11 @@ subMenuCross.on("click",
         navDetail.hide();
         navDetail.eq(subIndex).show();
         subMenuLinks.css("color", "#aaaaab");
-        subMenuCross.css("background", "url(./images/nav-wrap/cross-button.svg) center/contain no-repeat");
-        subMenuCross.eq(subIndex).css("background","url(./images/nav-wrap/cross-top.svg) center/contain no-repeat");
+        subMenuCross.css("background", "url(img/nav-wrap/cross-button.svg) center/contain no-repeat");
+        subMenuCross.eq(subIndex).css("background","url(img/nav-wrap/cross-top.svg) center/contain no-repeat");
         if (show) {
             navDetail.eq(subIndex).hide();
-            subMenuCross.eq(subIndex).css("background", "url(./images/nav-wrap/cross-button.svg) center/contain no-repeat");
+            subMenuCross.eq(subIndex).css("background", "url(img/nav-wrap/cross-button.svg) center/contain no-repeat");
         }
         else $(this).parent().children(".sub-menu__links").css("color", "#EAAD1C");
     }
